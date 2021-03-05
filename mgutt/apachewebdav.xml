@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>ApacheWebDAV</Name>
+  <Name>Apache WebDAV</Name>
   <Repository>bytemark/webdav</Repository>
   <Registry>https://hub.docker.com/r/bytemark/webdav/</Registry>
   <Network>bridge</Network>
