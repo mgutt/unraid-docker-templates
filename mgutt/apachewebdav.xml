@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
    <Support>https://forums.unraid.net/topic/103601-support-apache-webdav-bytemark/</Support>
-  <Project>https://httpd.apache.org/docs/2.4/mod/mod_dav.html<Project/>
+  <Project>https://httpd.apache.org/docs/2.4/mod/mod_dav.html</Project>
   <Overview>Specifying USERNAME and PASSWORD only supports a single user. If you want to have lots of different logins for various users, bind mount user.passwd as follows:&#xD;
 &#xD;
 Open the Unraid WebTerminal &amp;gt;_ and execute the following:&#xD;
