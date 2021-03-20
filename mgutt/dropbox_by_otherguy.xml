@@ -29,7 +29,7 @@ If your "Dropbox" share has the cache setting "Only":&#xD;
 /mnt/cache/Dropbox&#xD;
 &#xD;
 You could even use "/mnt/disk1/Dropbox" with the cache Option "Yes", but if you add new files to this share, they won't be uploaded to Dropbox as long the Mover did not move them to the array.</Overview>
-  <Category/>
+  <Category>Cloud</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/dropbox.png</Icon>
