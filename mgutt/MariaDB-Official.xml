@@ -11,6 +11,8 @@
   <Project>https://mariadb.org/</Project>
   <Overview>Official MariaDB database container. It allows to set a database and username without using the console.&#xD;
 &#xD;
+MariaDB is a community-developed, commercially supported fork of MySQL (RDBMS).&#xD;
+&#xD;
 Root Password:&#xD;
 This container creates a random root password on initial execution. Open Docker &amp;gt; MariaDB Icon &amp;gt; Logs &amp;gt; Scroll down to "GENERATED ROOT PASSWORD" to find it.&#xD;
 &#xD;
