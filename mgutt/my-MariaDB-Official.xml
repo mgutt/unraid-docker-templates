@@ -78,7 +78,7 @@ docker exec -i MariaDB-Official sh -c 'exec mysql -uroot -p"YOUR_ROOT_PASSWORD"'
       <Mode/>
     </Variable>
     <Variable>
-      <Value>password</Value>
+      <Value></Value>
       <Name>MARIADB_PASSWORD</Name>
       <Mode/>
     </Variable>
