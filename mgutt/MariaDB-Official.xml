@@ -14,7 +14,7 @@
 MariaDB is a community-developed, commercially supported fork of MySQL (RDBMS).&#xD;
 &#xD;
 Root Password:&#xD;
-This container creates a random root password on initial execution. Open Docker &amp;gt; MariaDB Icon &amp;gt; Logs &amp;gt; Scroll down to "GENERATED ROOT PASSWORD" to find it.&#xD;
+This container creates by default a random root password on initial execution. Open Docker &amp;gt; MariaDB Icon &amp;gt; Logs &amp;gt; Scroll down to "GENERATED ROOT PASSWORD" to find it.&#xD;
 &#xD;
 Creating database dumps&#xD;
 docker exec MariaDB-Official sh -c 'exec mysqldump --all-databases -uroot -p"YOUR_ROOT_PASSWORD"' &amp;gt; /mnt/user/Backups/all-databases.sql&#xD;
