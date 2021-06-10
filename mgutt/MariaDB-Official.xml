@@ -22,7 +22,7 @@ docker exec -i MariaDB-Official sh -c 'exec mysql -uroot -p"YOUR_ROOT_PASSWORD"'
   <Category>Tools:Utilities Other: Network:Other</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/MariaDB-Official.xml</TemplateURL>
-  <Icon>https://github.com/mgutt/unraid-docker-templates/raw/main/mgutt/images/mariadb-logo-vert_blue-transparent.png</Icon>
+  <Icon>https://github.com/mgutt/unraid-docker-templates/raw/main/mgutt/images/mariadb.png</Icon>
   <ExtraParams>--user=99:100 --memory=2G</ExtraParams>
   <PostArgs/>
   <CPUset/>
