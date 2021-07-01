@@ -100,8 +100,8 @@ changeme&#xD;
   <Config Name="WebUI" Target="81" Default="" Mode="tcp" Description="Container Port: 81" Type="Port" Display="always" Required="false" Mask="false">81</Config>
   <Config Name="HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="HTTPS Port" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
-  <Config Name="Host" Target="DB_MYSQL_HOST" Default="" Mode="" Description="Container Variable: DB_MYSQL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Port" Target="DB_MYSQL_PORT" Default="" Mode="" Description="Container Variable: DB_MYSQL_PORT" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="MariaDB Host" Target="DB_MYSQL_HOST" Default="" Mode="" Description="Container Variable: DB_MYSQL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MariaDB Port" Target="DB_MYSQL_PORT" Default="" Mode="" Description="Container Variable: DB_MYSQL_PORT" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="MariaDB User" Target="DB_MYSQL_USER" Default="" Mode="" Description="Container Variable: DB_MYSQL_USER" Type="Variable" Display="always" Required="true" Mask="false">npm</Config>
   <Config Name="MariaDB Password" Target="DB_MYSQL_PASSWORD" Default="" Mode="" Description="Container Variable: DB_MYSQL_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="MariaDB Database Name" Target="DB_MYSQL_NAME" Default="" Mode="" Description="Container Variable: DB_MYSQL_NAME" Type="Variable" Display="always" Required="true" Mask="false">npm</Config>
