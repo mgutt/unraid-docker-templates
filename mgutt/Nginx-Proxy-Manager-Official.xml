@@ -22,7 +22,7 @@ changeme&#xD;
   <WebUI>http://[IP]:[PORT:81]</WebUI>
   <TemplateURL/>
   <Icon>https://nginxproxymanager.com/icon.png</Icon>
-  <ExtraParams>--memory=1G</ExtraParams>
+  <ExtraParams>--memory=1G --no-healthcheck</ExtraParams>
   <PostArgs>#&amp;amp;&amp;amp; docker network connect npm Nginx-Proxy-Manager-Official</PostArgs>
   <CPUset/>
   <DateInstalled>1625175882</DateInstalled>
