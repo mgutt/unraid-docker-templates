@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Nginx Proxy Manager Official</Name>
+  <Name>Nginx-Proxy-Manager-Official</Name>
   <Repository>jc21/nginx-proxy-manager</Repository>
   <Registry>https://hub.docker.com/r/jc21/nginx-proxy-manager</Registry>
   <Network>br0</Network>
@@ -38,7 +38,7 @@ changeme&#xD;
 &#xD;
 </Description>
   <Networking>
-    <Mode>npm</Mode>
+    <Mode>br0</Mode>
     <Publish>
       <Port>
         <HostPort>81</HostPort>
@@ -71,7 +71,7 @@ changeme&#xD;
   </Data>
   <Environment>
     <Variable>
-      <Value>172.19.0.7</Value>
+      <Value></Value>
       <Name>DB_MYSQL_HOST</Name>
       <Mode/>
     </Variable>
@@ -86,7 +86,7 @@ changeme&#xD;
       <Mode/>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value/>
       <Name>DB_MYSQL_PASSWORD</Name>
       <Mode/>
     </Variable>
