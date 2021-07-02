@@ -23,7 +23,7 @@ changeme&#xD;
   <TemplateURL/>
   <Icon>https://nginxproxymanager.com/icon.png</Icon>
   <ExtraParams>--memory=1G</ExtraParams>
-  <PostArgs>#&& docker network connect npm Nginx-Proxy-Manager-Official</PostArgs>
+  <PostArgs>#&amp;amp;&amp;amp; docker network connect npm Nginx-Proxy-Manager-Official</PostArgs>
   <CPUset/>
   <DateInstalled>1625175882</DateInstalled>
   <DonateText/>
