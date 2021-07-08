@@ -15,17 +15,15 @@ Default login:&#xD;
 admin@example.com&#xD;
 &#xD;
 Password:&#xD;
-changeme&#xD;
-&#xD;
-</Overview>
-  <Category>Tools: Other: Network:Web Network:Proxy Network:Management Network:Other</Category>
+changeme</Overview>
+  <Category>Tools:Utilities Other: Network:Web Network:Proxy Network:Management Network:Other</Category>
   <WebUI>http://[IP]:[PORT:81]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/Nginx-Proxy-Manager-Official.xml</TemplateURL>
   <Icon>https://nginxproxymanager.com/icon.png</Icon>
   <ExtraParams>--memory=1G --no-healthcheck</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1625175882</DateInstalled>
+  <DateInstalled>1625775335</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Nginx Proxy Manager (NPM) allows adding proxy hosts through a password-protected multi-user WebUI. Add free Let's Encrypt SSL certificates to secure your web services. They are renewed by NPM automatically.&#xD;
@@ -34,9 +32,7 @@ Default login:&#xD;
 admin@example.com&#xD;
 &#xD;
 Password:&#xD;
-changeme&#xD;
-&#xD;
-</Description>
+changeme</Description>
   <Networking>
     <Mode>br0</Mode>
     <Publish>
@@ -71,28 +67,8 @@ changeme&#xD;
   </Data>
   <Environment>
     <Variable>
-      <Value></Value>
-      <Name>DB_MYSQL_HOST</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>3306</Value>
-      <Name>DB_MYSQL_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>npm</Value>
-      <Name>DB_MYSQL_USER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>DB_MYSQL_PASSWORD</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>npm</Value>
-      <Name>DB_MYSQL_NAME</Name>
+      <Value>/data/database.sqlite</Value>
+      <Name>DB_SQLITE_FILE</Name>
       <Mode/>
     </Variable>
   </Environment>
@@ -100,11 +76,7 @@ changeme&#xD;
   <Config Name="WebUI" Target="81" Default="" Mode="tcp" Description="Container Port: 81" Type="Port" Display="always" Required="false" Mask="false">81</Config>
   <Config Name="HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="HTTPS Port" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
-  <Config Name="MariaDB Host" Target="DB_MYSQL_HOST" Default="" Mode="" Description="Container Variable: DB_MYSQL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MariaDB Port" Target="DB_MYSQL_PORT" Default="" Mode="" Description="Container Variable: DB_MYSQL_PORT" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
-  <Config Name="MariaDB User" Target="DB_MYSQL_USER" Default="" Mode="" Description="Container Variable: DB_MYSQL_USER" Type="Variable" Display="always" Required="true" Mask="false">npm</Config>
-  <Config Name="MariaDB Password" Target="DB_MYSQL_PASSWORD" Default="" Mode="" Description="Container Variable: DB_MYSQL_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="MariaDB Database Name" Target="DB_MYSQL_NAME" Default="" Mode="" Description="Container Variable: DB_MYSQL_NAME" Type="Variable" Display="always" Required="true" Mask="false">npm</Config>
   <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/Nginx-Proxy-Manager-Official/data</Config>
   <Config Name="Certificates" Target="/etc/letsencrypt" Default="" Mode="rw" Description="Container Path: /etc/letsencrypt" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/Nginx-Proxy-Manager-Official/letsencrypt</Config>
+  <Config Name="Host Key 1" Target="DB_SQLITE_FILE" Default="" Mode="" Description="Container Variable: DB_SQLITE_FILE" Type="Variable" Display="always" Required="false" Mask="false">/data/database.sqlite</Config>
 </Container>
