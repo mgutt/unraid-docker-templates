@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/103601-support-apache-webdav-bytemark/</Support>
+  <Support>https://forums.unraid.net/topic/103601-support-apache-webdav/</Support>
   <Project>https://httpd.apache.org/docs/2.4/mod/mod_dav.html</Project>
   <Overview>Very simple WebDAV server based on Apache. You need a WebDAV client to transfer files. It does not include a WebUI to upload files through your browser.&#xD;
 &#xD;
