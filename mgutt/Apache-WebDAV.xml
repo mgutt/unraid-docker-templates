@@ -30,12 +30,12 @@ or this if you choosed "Digest" authentification:&#xD;
 Execute the command multiple times with different usernames to add more users.</Overview>
   <Category>Cloud:</Category>
   <WebUI>http://[IP]:[PORT:8384]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/apachewebdav.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/Apache-WebDAV.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/webdav-powered-by-apache.png</Icon>
   <ExtraParams>--memory=1G</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1625853568</DateInstalled>
+  <DateInstalled>1625945643</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Very simple WebDAV server based on Apache. You need a WebDAV client to transfer files. It does not include a WebUI to upload files through your browser.&#xD;
@@ -70,6 +70,11 @@ Execute the command multiple times with different usernames to add more users.</
   <Data>
     <Volume>
       <HostDir>/mnt/user/webdav</HostDir>
+      <ContainerDir>/var/lib/dav/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/webdav</HostDir>
       <ContainerDir>/var/lib/dav</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -96,12 +101,12 @@ Execute the command multiple times with different usernames to add more users.</
       <Mode/>
     </Variable>
     <Variable>
-      <Value>test</Value>
+      <Value/>
       <Name>USERNAME</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>test</Value>
+      <Value/>
       <Name>PASSWORD</Name>
       <Mode/>
     </Variable>
@@ -127,16 +132,17 @@ Execute the command multiple times with different usernames to add more users.</
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Share" Target="/var/lib/dav" Default="" Mode="rw" Description="Container Path: /var/lib/dav" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/webdav</Config>
+  <Config Name="WebDAV Share" Target="/var/lib/dav/data" Default="" Mode="rw" Description="Container Path: /var/lib/dav/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/webdav</Config>
   <Config Name="Webserver Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8384</Config>
   <Config Name="Domains" Target="SERVER_NAMES" Default="" Mode="" Description="Comma-separated list of domains (eg, example.com,www.example.com). The first is set as the ServerName, and the rest (if any) are set as ServerAlias. The default is localhost." Type="Variable" Display="always" Required="false" Mask="false">localhost</Config>
   <Config Name="Base URL" Target="LOCATION" Default="" Mode="" Description="The URL path for WebDAV (eg, if set to /webdav then clients should connect to example.com/webdav). The default is /." Type="Variable" Display="always" Required="false" Mask="false">/</Config>
   <Config Name="Authentication" Target="AUTH_TYPE" Default="" Mode="" Description="Apache authentication type to use. This can be Basic (best choice for HTTPS) or Digest (best choice for HTTP). The default is Basic." Type="Variable" Display="always" Required="false" Mask="false">Basic</Config>
   <Config Name="Login Title" Target="REALM" Default="" Mode="" Description="The string will appear in the password dialog provided by browsers." Type="Variable" Display="always" Required="false" Mask="false">WebDAV-Login</Config>
-  <Config Name="Username" Target="USERNAME" Default="" Mode="" Description="Authenticate with this username (and the password below). Will be ignored if /user.passwd is present." Type="Variable" Display="always" Required="false" Mask="false">test</Config>
-  <Config Name="Password" Target="PASSWORD" Default="" Mode="" Description="Authenticate with this password (and the username above). Will be ignored if /user.passwd is present." Type="Variable" Display="always" Required="false" Mask="false">test</Config>
+  <Config Name="Username" Target="USERNAME" Default="" Mode="" Description="Authenticate with this username (and the password below). Will be ignored if /user.passwd is present." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Password" Target="PASSWORD" Default="" Mode="" Description="Authenticate with this password (and the username above). Will be ignored if /user.passwd is present." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Public methods" Target="ANONYMOUS_METHODS" Default="" Mode="" Description="Comma-separated list of HTTP request methods (eg, GET,POST,OPTIONS,PROPFIND) which can be used without login. The default is to disallow any anonymous access." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enable SSL" Target="SSL_CERT" Default="" Mode="" Description="Set to selfsigned to generate a self-signed certificate and enable Apache's SSL module. If you specify SERVER_NAMES, the first domain is set as the Common Name." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="User ID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Group ID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Config" Target="/var/lib/dav" Default="" Mode="rw" Description="Container Path: /var/lib/dav" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/webdav</Config>
 </Container>
