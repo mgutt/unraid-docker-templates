@@ -29,7 +29,7 @@ or this if you choosed "Digest" authentification:&#xD;
 &#xD;
 Execute the command multiple times with different usernames to add more users.</Overview>
   <Category>Cloud:</Category>
-  <WebUI>http://[IP]:[PORT:8384]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/Apache-WebDAV.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/webdav-powered-by-apache.png</Icon>
   <ExtraParams>--memory=1G</ExtraParams>
