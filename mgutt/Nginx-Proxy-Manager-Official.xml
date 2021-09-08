@@ -65,13 +65,8 @@ changeme</Description>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/tmp/nginx-proxy-manager/var/log</HostDir>
+      <HostDir>/tmp/Nginx-Proxy-Manager-Official/var/log</HostDir>
       <ContainerDir>/var/log</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/tmp/nginx-proxy-manager/data/logs</HostDir>
-      <ContainerDir>/data/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -88,7 +83,6 @@ changeme</Description>
   <Config Name="HTTPS Port" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
   <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Nginx-Proxy-Manager-Official/data</Config>
   <Config Name="Certificates" Target="/etc/letsencrypt" Default="" Mode="rw" Description="Container Path: /etc/letsencrypt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Nginx-Proxy-Manager-Official/letsencrypt</Config>
-  <Config Name="Error Logs" Target="/var/log" Default="" Mode="rw" Description="Container Path: /var/log" Type="Path" Display="always" Required="false" Mask="false">/tmp/nginx-proxy-manager/var/log</Config>
-  <Config Name="Proxy Logs" Target="/data/logs" Default="" Mode="rw" Description="Container Path: /data/logs" Type="Path" Display="always" Required="false" Mask="false">/tmp/nginx-proxy-manager/data/logs</Config>
-  <Config Name="Host Key 1" Target="DB_SQLITE_FILE" Default="" Mode="" Description="Container Variable: DB_SQLITE_FILE" Type="Variable" Display="always" Required="false" Mask="false">/data/database.sqlite</Config>
+  <Config Name="Error Logs" Target="/var/log" Default="" Mode="rw" Description="Container Path: /var/log" Type="Path" Display="always" Required="false" Mask="false">/tmp/Nginx-Proxy-Manager-Official/var/log</Config>
+  <Config Name="Database" Target="DB_SQLITE_FILE" Default="" Mode="" Description="Container Variable: DB_SQLITE_FILE" Type="Variable" Display="always" Required="false" Mask="false">/data/database.sqlite</Config>
 </Container>
