@@ -82,7 +82,7 @@ You could even use "/mnt/disk1/Dropbox" with the cache Option "Yes", but if you 
       <Value>true</Value>
       <Name>DROPBOX_SKIP_UPDATE</Name>
       <Mode/>
-    </Variable
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Dropbox user files" Target="/opt/dropbox/Dropbox" Default="" Mode="rw" Description="Read the description! Do not set this path to /mnt/user..." Type="Path" Display="always" Required="false" Mask="false">/mnt/disk1/Dropbox</Config>
