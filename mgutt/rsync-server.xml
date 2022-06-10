@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>rsync-server</Name>
+  <Repository>eeacms/rsync</Repository>
+  <Registry>https://hub.docker.com/r/instrumentisto/rsync-ssh</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/124689-support-rsync-server/</Support>
+  <Project>https://github.com/eea/eea.docker.rsync</Project>
+  <Overview>Simple rsync server based on Alpine&#xD;
+&#xD;
+To be able to connect to this rsync server you need to add the SSH key of your client to the variable SSH_AUTH_KEY_1&#xD;
+&#xD;
+How to create an SSH key?&#xD;
+Log into your client machine and create an SSH key as follows:&#xD;
+ssh-keygen -t rsa -b 4096&#xD;
+&#xD;
+Press 3x ENTER to use the default location and create the key without password. Now display your SSH Key with the following command:&#xD;
+cat ~/.ssh/id_rsa.pub&#xD;
+&#xD;
+Copy the complete line like "ssh-rsa AAA.... username@client" and paste it in the field "SSH_AUTH_KEY_1" and start this container.&#xD;
+&#xD;
+You can test the connection from your client as follows (replace "tower" against your server name or domain):&#xD;
+rsync --dry-run --itemize-changes --archive -e 'ssh -p 5533' root@tower:/mnt/user/system/ /tmp</Overview>
+  <Category>Backup: Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Newrsynclogo.png/220px-Newrsynclogo.png</Icon>
+  <ExtraParams>--memory=1G</ExtraParams>
+  <PostArgs>server</PostArgs>
+  <CPUset/>
+  <DateInstalled>1654857415</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Simple rsync server based on Alpine&#xD;
+&#xD;
+To be able to connect to this rsync server you need to add the SSH key of your client to the variable SSH_AUTH_KEY_1&#xD;
+&#xD;
+How to create an SSH key?&#xD;
+Log into your client machine and create an SSH key as follows:&#xD;
+ssh-keygen -t rsa -b 4096&#xD;
+&#xD;
+Press 3x ENTER to use the default location and create the key without password. Now display your SSH Key with the following command:&#xD;
+cat ~/.ssh/id_rsa.pub&#xD;
+&#xD;
+Copy the complete line like "ssh-rsa AAA.... username@client" and paste it in the field "SSH_AUTH_KEY_1" and start this container.&#xD;
+&#xD;
+You can test the connection from your client as follows (replace "tower" against your server name or domain):&#xD;
+rsync --dry-run --itemize-changes --archive -e 'ssh -p 5533' root@tower:/mnt/user/system/ /tmp</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5533</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/mnt/user/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>enter_ssh_key_of_client</Value>
+      <Name>SSH_AUTH_KEY_1</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SSH_AUTH_KEY_2</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="File path" Target="/mnt/user/" Default="" Mode="ro" Description="Container Path: /mnt/user/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Port" Target="22" Default="" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="false" Mask="false">5533</Config>
+  <Config Name="SSH_AUTH_KEY_1" Target="SSH_AUTH_KEY_1" Default="" Mode="" Description="Container Variable: SSH_AUTH_KEY_1" Type="Variable" Display="always" Required="false" Mask="false">enter_ssh_key_of_client</Config>
+  <Config Name="SSH_AUTH_KEY_2" Target="SSH_AUTH_KEY_2" Default="" Mode="" Description="Container Variable: SSH_AUTH_KEY_2" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
